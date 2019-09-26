@@ -12,7 +12,7 @@ exports.chunkPromises = function(promises, size) {
 
     var collector = Promise.resolve([]);
     chunks.forEach(chunk => {
-      collector = collector.then(results => Promise.all(chunk)
+      collector = collector.then(results => Promise.all(chunk.map(c => c()))
         .then(subResults => results.concat(subResults)));
     });
     return collector;

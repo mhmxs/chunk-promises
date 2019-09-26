@@ -16,7 +16,7 @@ describe('Test chunked promise execution:', function() {
 
     chunkPromises(promises, 2)
       .then(results => {
-        assert(7 === results.length);
+        assert(JSON.stringify(["a", "b", "c", "d", "e", "f", "g"]) === JSON.stringify(results));
       });
   });
 });
