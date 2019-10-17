@@ -1,3 +1,5 @@
+'use strict';
+
 exports.chunkPromises = function(promises, size) {
     if (!Array.isArray(promises) || !promises.length) {
         return Promise.resolve([])
