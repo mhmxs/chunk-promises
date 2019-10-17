@@ -6,7 +6,7 @@ exports.chunkPromises = function(promises, size) {
     var size = size ? size : 10;
 
     var chunks = [];
-    for (i = 0, j = promises.length; i < j; i += size) {
+    for (var i = 0, j = promises.length; i < j; i += size) {
         chunks.push(promises.slice(i, i + size));
     }
 
