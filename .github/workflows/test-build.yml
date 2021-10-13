@@ -1,0 +1,42 @@
+name: Lint and test
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'    
+  push:    
+    branches:
+      - main
+      - releases/*
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - run: make deps
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          eslint: true
+          prettier: true
+
+ test-build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - run: make deps test

@@ -1,8 +1,8 @@
 deps:
-	npm install
+	npm ci
 
 test:
 	./node_modules/.bin/mocha test-directory/test.js
 
 publish:
-	npm publish --tag v1.0.4 --access public
+	npm publish --access public
