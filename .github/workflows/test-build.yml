@@ -29,8 +29,7 @@ jobs:
         with:
           eslint: true
           prettier: true
-
- test-build:
+  test-build:
     name: Test
     runs-on: ubuntu-latest
     steps:
