@@ -26,6 +26,7 @@ jobs:
       - run: |
           make deps
           npm install -g eslint
+          eslint --init
       - name: Run linters
         uses: wearerequired/lint-action@v1
         with:
