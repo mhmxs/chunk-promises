@@ -1,8 +1,13 @@
-const { describe } = require("mocha");
+/* eslint no-undef: "off" */
+
 const assert = require("assert");
-const chunkPromises = require("../index.js").chunkPromises;
+
+const { describe } = require("mocha");
+
+const chunkPromises = require("../index").chunkPromises;
 
 describe("Test chunked promise execution:", function () {
+  // eslint
   it("all 4 chunks must execute", function () {
     const promises = [
       () =>
