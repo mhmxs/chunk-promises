@@ -23,7 +23,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14.x
-      - run: make deps
+      - run: |
+          make deps
+          npm install -g eslint
       - name: Run linters
         uses: wearerequired/lint-action@v1
         with:
