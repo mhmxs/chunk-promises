@@ -5,10 +5,7 @@
     "es2021": true
   },
   "plugins": ["filenames", "github", "import", "no-async-foreach"],
-  "extends": [
-      "eslint:recommended",
-      "plugin:github/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:github/recommended"],
   "parserOptions": {
     "ecmaVersion": 13
   },
@@ -21,27 +18,32 @@
     "import/no-dynamic-require": "error",
     // Disable the rule that checks that devDependencies aren't imported since we use a single
     // linting configuration file for both source and test code.
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "import/no-namespace": "off",
     "import/no-unresolved": "error",
     "import/no-webpack-loader-syntax": "error",
-    "import/order": ["error", {
-        "alphabetize": {"order": "asc"},
+    "import/order": [
+      "error",
+      {
+        "alphabetize": { "order": "asc" },
         "newlines-between": "always"
-    }],
+      }
+    ],
     "no-async-foreach/no-async-foreach": "error",
     "no-console": "off",
     "no-sequences": "error",
     "no-shadow": "off",
     "one-var": ["error", "never"],
     "github/no-then": "off"
-},
-"overrides": [{
-    // "temporarily downgraded during transition to eslint
-    "files": "**",
-    "rules": {
+  },
+  "overrides": [
+    {
+      // "temporarily downgraded during transition to eslint
+      "files": "**",
+      "rules": {
         "func-style": "off",
         "sort-imports": "off"
+      }
     }
-}]
+  ]
 }
