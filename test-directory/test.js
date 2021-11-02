@@ -7,7 +7,6 @@ const { describe } = require("mocha");
 const chunkPromises = require("../index").chunkPromises;
 
 describe("Test chunked promise execution:", function () {
-  // eslint
   it("all 4 chunks must execute", function () {
     const promises = [
       () =>
