@@ -3,13 +3,13 @@ name: Lint and test
 on:
   pull_request:
     paths-ignore:
-      - '**.md'    
-  push:    
+      - "**.md"
+  push:
     branches:
       - master
       - releases/*
     paths-ignore:
-      - '**.md'
+      - "**.md"
 
 jobs:
   lint:
