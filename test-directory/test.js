@@ -4,7 +4,7 @@ const chunkPromises = require("../index.js").chunkPromises;
 
 describe("Test chunked promise execution:", function () {
   it("all 4 chunks must execute", function () {
-    var promises = [
+    const promises = [
       () =>
         new Promise((resolver) => {
           resolver("a");

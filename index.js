@@ -7,18 +7,18 @@ exports.chunkPromises = function (promises, size) {
 
   size = size ? size : 10;
 
-  var chunks = [];
-  for (var i = 0, j = promises.length; i < j; i += size) {
+  const chunks = [];
+  for (let i = 0, j = promises.length; i < j; i += size) {
     chunks.push(promises.slice(i, i + size));
   }
 
-  var collector = Promise.resolve([]);
-  chunks.forEach((chunk) => {
+  let collector = Promise.resolve([]);
+  for (const chunk of chunks) {
     collector = collector.then((results) =>
       Promise.all(chunk.map((c) => c())).then((subResults) =>
         results.concat(subResults)
       )
     );
-  });
+  }
   return collector;
 };

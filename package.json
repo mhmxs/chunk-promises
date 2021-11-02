@@ -23,6 +23,8 @@
   "devDependencies": {
     "assert": "^2.0.0",
     "eslint": "^8.1.0",
+    "eslint-plugin-github": "latest",
+    "eslint-plugin-no-async-foreach": "latest",
     "prettier": "^2.4.1",
     "mocha": "^9.1.3"
   },
