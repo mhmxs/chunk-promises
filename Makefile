@@ -1,4 +1,5 @@
 deps:
+	npm install-ci-test
 	npm install
 
 fmt:
