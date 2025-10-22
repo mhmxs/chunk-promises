@@ -1,6 +1,8 @@
+all: deps fmt lint test
+
 deps:
-	npm install-ci-test
-	npm install
+	npm install-ci-test --force
+	npm install --force
 
 fmt:
 	./node_modules/prettier/bin-prettier.js -w *.md *.js *.json .*.json .github/workflows/*.yml

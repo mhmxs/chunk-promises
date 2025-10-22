@@ -23,12 +23,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 20.x
-      - run: make deps
-      - name: Run linters
-        uses: wearerequired/lint-action@v1
-        with:
-          eslint: true
-          prettier: true
+      - run: make deps lint
   test-build:
     name: Test
     runs-on: ubuntu-latest
