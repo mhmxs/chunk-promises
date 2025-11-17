@@ -1,6 +1,6 @@
 {
   "name": "chunk-promises",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "This small NodeJS module splits promises into chunks and executes chunks one by one",
   "main": "index.js",
   "scripts": {
